@@ -30,4 +30,10 @@ public class SecurityController {
       log.info("logined member");
    }
    
+   @GetMapping("/admin")
+   public void doAdmin() {
+
+      log.info("logined admin");
+   }
+   
 }
