@@ -7,7 +7,9 @@
       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
    <http> 
-      <form-login />
+   		<intercept-url pattern="/security/all" access="permitAll" />
+   		<intercept-url pattern="/security/member" access="hasRole('ROLE_MEMBER')" /> 
+    	<form-login />
    </http> 
    
    <!-- provider --> 
