@@ -45,5 +45,19 @@ public class HomeController {
 		log.info("Welcome Login Form");
 		return "login/loginForm2";
 	}
+	
+	@GetMapping("/user/userHome")
+	public void userHome() {
+		log.info("userHome");
+	}
+	
+	@GetMapping("/admin/adminHome")
+	public void adminHome() {
+		log.info("adminHome");
+	}
 
+	@GetMapping("/login/accessDenied")
+	public void accessDenied() {
+		log.info("Access is Denied");
+	}
 }
