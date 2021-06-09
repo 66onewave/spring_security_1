@@ -1,5 +1,6 @@
 package edu.bit.ex.controller;
 
+import java.security.Principal;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -38,7 +39,7 @@ public class SecurityController {
    }
    
    @GetMapping("/accessError")
-   public void accessError(Authentication auth, Model model) {
+   public void accessError(Authentication auth, Principal pi, Model model) {
 
       log.info("accessError()..." + auth);
       model.addAttribute("msg", "Access Denied");
