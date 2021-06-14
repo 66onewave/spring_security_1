@@ -26,7 +26,6 @@
 
 		<logout logout-url="/logout" logout-success-url="/" />
 
-
 		<!-- 403 에러 처리 -->
 		<access-denied-handler
 			error-page="/login/accessDenied" />
